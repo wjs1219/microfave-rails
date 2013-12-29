@@ -12,34 +12,34 @@
         <span class="item"><a href=http://www.google.com/search?q=<%= feed_item.item.gsub ' ','+' %> target="_blank"><%= feed_item.item %></a></span>
         <span class="category">
           <% if feed_item.category=='Music' %>
-            <i class="icomoon-music"></i>
+            MUSIC
           <% end %>
           <% if feed_item.category=='Book' %>
-            <i class="icomoon-book"></i>
+            BOOK
           <% end %>
           <% if feed_item.category=='Movie' %>
-            <i class="icomoon-camera"></i>
+            MOVIE
           <% end %>
           <% if feed_item.category=='TV' %>
-            <i class="icomoon-tv"></i>
+            TV
           <% end %>
           <% if feed_item.category=='Website' %>
-            <i class="icomoon-screen"></i>
+            WEBSITE
           <% end %>
           <% if feed_item.category=='Food' %>
-            <i class="icomoon-food"></i>
+            FOOD
           <% end %>
           <% if feed_item.category=='App' %>
-            <i class="icomoon-mobile"></i>
+            APP
           <% end %>
           <% if feed_item.category=='Fashion' %>
-            <i class="icomoon-t-shirt"></i>
+            FASHION
           <% end %>
           <% if feed_item.category=='Product' %>
-            <i class="icomoon-cart"></i>
+            PRODUCT
           <% end %>
           <% if feed_item.category=='Other' %>
-            <%= feed_item.category %>
+            OTHER
           <% end %>
         </span>
         <section class="content"><%= feed_item.content %></section>
@@ -47,20 +47,19 @@
           <span class="timestamp">Posted <%= time_ago_in_words(feed_item.created_at) %> ago.</span>
           <span class="buttons">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="icomoon-share"></i>
-            </a>
+              Share</a>
             <ul class="dropdown-menu">
-              <li><%= link_to raw('<i class="icomoon-facebook"></i>'), current_user %></li>
-              <li><%= link_to raw('<i class="icomoon-twitter"></i>'), current_user %></li>
-              <li><%= link_to raw('<i class="icomoon-google-plus"></i>'), current_user %></li>
-              <li><%= link_to raw('<i class="icomoon-reddit"></i>'), current_user %></li>
-              <li><%= link_to raw('<i class="icomoon-stumbleupon"></i>'), current_user %></li>
+              <li><%= link_to "Facebook", current_user %></li>
+              <li><%= link_to "Twitter", current_user %></li>
+              <li><%= link_to "Google+", current_user %></li>
+              <li><%= link_to "Reddit", current_user %></li>
+              <li><%= link_to "Stumble Upon", current_user %></li>
             </ul>
-            <%= link_to raw('<i class="icomoon-heart"></i>'), current_user %>
-            <%= link_to raw('<i class="icomoon-bullhorn"></i>'), current_user %>
-            <%= link_to raw('<i class="icomoon-bubbles"></i>'), current_user %>
+            <%= link_to "Like", current_user %>
+            <%= link_to "Broadcast", current_user %>
+            <%= link_to "Comment", current_user %>
             <% if current_user?(feed_item.user) %>
-            <%= link_to raw('<i class="icomoon-trash"></i>'), feed_item, method: :delete,
+            <%= link_to "Delete", feed_item, :style=>'color:#B00000;', method: :delete,
                                      data: { confirm: "Are you sure?" },
 			             title: feed_item.item, 
                                      title: feed_item.category,
