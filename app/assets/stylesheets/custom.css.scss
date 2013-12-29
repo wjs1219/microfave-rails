@@ -30,11 +30,18 @@ html {
 }
 
 body {
-  padding-top: 70px;
-  background: #1b1b1b;
+  padding-top: 70px !important;
+  background: #fff;
   width:100%;
   margin-left:auto;
   margin-right:auto;
+}
+
+.container {
+  @media (min-width: 980px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 ol {
@@ -336,16 +343,16 @@ span {
   margin-right: auto !important;
 }
 
-div.Music {background: #ff9966; margin:4px;}
-div.Book {background: #cc9966; margin:4px;}
-div.Movie {background: #99ff99; margin:4px;}
-div.TV {background: #ccff99; margin:4px;}
-div.Food {background: #ffff66; margin: 4px;}
-div.Website {background: #99ccff; margin: 4px;}
-div.App {background: #ccccff; margin:4px;}
-div.Fashion {background: #ff9999; margin:4px;}
-div.Product {background: #f0f0f0; margin: 4px;}
-div.Other {background: AntiqueWhite; margin: 4px;}
+div.Music {background: #ff9966; margin-bottom:4px;}
+div.Book {background: #cc9966; margin-bottom:4px;}
+div.Movie {background: #99ff99; margin-bottom:4px;}
+div.TV {background: #ccff99; margin-bottom:4px;}
+div.Food {background: #ffff66; margin-bottom:4px;}
+div.Website {background: #99ccff; margin-bottom:4px;}
+div.App {background: #ccccff; margin-bottom:4px;}
+div.Fashion {background: #ff9999; margin-bottom:4px;}
+div.Product {background: #f0f0f0; margin-bottom:4px;}
+div.Other {background: AntiqueWhite; margin-bottom:4px;}
 
 
 /*====================ICOMOON FONTS====================*/
