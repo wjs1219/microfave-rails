@@ -3,31 +3,30 @@
 
 <h2>
   <%= form_for(:session, url: sessions_path) do |f| %>
-    <div class="col-xs-6">
+  <div class="col-xs-12 col-md-3 col-md-offset-2">
     <%= f.label :email %>
-    </div>
+  </div>
 
-    <div class-"col-xs-6">
+  <div class="col-xs-12 col-md-5">
     <%= f.text_field :email %>
-    </div>
+  </div>
 
-    <div class="col-xs-6">
+  <div class="col-xs-12 col-md-3 col-md-offset-2">
     <%= f.label :password %>
-    </div>
+  </div>
 
-    <div class-"col-xs-6">
+  <div class="col-xs-12 col-md-5">
     <%= f.password_field :password %>
     </div>
 
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
     <h3>
-    <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     </h3>
     <% end %>
     </div>
 
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
       <p>New user? <%= link_to "Sign up now!", signup_path %></p>
     </div>
-
 </h2>

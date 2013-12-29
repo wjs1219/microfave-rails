@@ -1,42 +1,49 @@
 <%= render 'shared/error_messages', object: f.object %>
 
-<span class="formdata">
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label "Friends Only" %>
-<%= f.check_box :namepriv %>
-</span>
+<div class="col-xs-12 col-md-3 col-md-offset-2">
+  <%= f.label :name %>
+</div>
+<div class="col-xs-12 col-md-5">
+  <%= f.text_field :name %>
+</div>
 
-<span class="formdata">
-<%= f.label :zip, "Zip/Postal Code" %>
-<%= f.text_field :zip %>
-<%= f.label "Friends Only" %>
-<%= f.check_box :zippriv %>
-</span>
+<div class="col-xs-12 col-md-3 col-md-offset-2">
+  <%= f.label :zip, "Zip/Postal Code" %>
+</div>
 
-<span class="formdata">
-<%= f.label :dob, "Date of Birth" %>
-<%= date_select :user, :dob, :start_year => Time.now.year - 100, :end_year => Time.now.year, :order => [:month, :day, :year] %>
-<%= f.label "Friends Only" %>
-<%= f.check_box :dobpriv %>
-</span>
+<div class="col-xs-12 col-md-5">
+  <%= f.text_field :zip %>
+</div>
 
-<span class="formdata">
-<%= f.label :email %>
-<%= f.text_field :email %>
-</span>
+<div class="col-xs-12 col-md-3 col-md-offset-2">
+  <%= f.label :dob, "Date of Birth" %>
+</div>
 
-<span class="formdata">
-<%= f.label "Make microfaves visible to friends only" %>
-<%= f.check_box :feedpriv %>
-</span>
+<div class="col-xs-12 col-md-5">
+  <%= date_select :user, :dob, :start_year => Time.now.year - 100, :end_year => Time.now.year, :order => [:month, :day, :year] %>
+</div>
 
-<span class="formdata">
-<%= f.label :password %>
-<%= f.password_field :password %>
-</span>
 
-<span class="formdata">
-<%= f.label :password_confirmation, "Confirm Password" %>
-<%= f.password_field :password_confirmation %>
-</span>
+<div class="col-xs-12 col-md-3 col-md-offset-2">
+  <%= f.label :email %>
+</div>
+
+<div class="col-xs-12 col-md-5">
+  <%= f.text_field :email %>
+</div>
+
+<div class="col-xs-12 col-md-3 col-md-offset-2">
+  <%= f.label :password %>
+</div>
+
+<div class="col-xs-12 col-md-5">
+  <%= f.password_field :password %>
+</div>
+
+<div class="col-xs-12 col-md-3 col-md-offset-2">
+  <%= f.label :password_confirmation, "Confirm Password" %>
+</div>
+
+<div class="col-xs-12 col-md-5">
+  <%= f.password_field :password_confirmation %>
+</div>

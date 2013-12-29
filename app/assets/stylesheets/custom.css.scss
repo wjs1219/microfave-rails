@@ -12,7 +12,6 @@
 
 @import "twitter/bootstrap";
 
-
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -38,6 +37,8 @@ body {
 }
 
 .container {
+  padding-left: 5px;
+  padding-right: 5px;
   @media (min-width: 980px) {
     padding-left: 15px;
     padding-right: 15px;
@@ -53,16 +54,7 @@ ol {
   text-align:center;
 }
 
-input#user_username,
-input#user_name,
-input#user_zip,
-input#user_email,
-input#user_password,
-input#user_password_confirmation,
- {width:30%;}
-select#user_dob_2i {width:14%;}
-select#user_dob_3i {width:7%;}
-select#user_dob_1i {width:9%;}
+
 
 textarea {
   resize: vertical;
@@ -99,7 +91,7 @@ p {
   float-right:auto !important;
 }
 
-p#about, form label, form input {
+p#about {
   color:gray;
   text-align: center;
 }
@@ -108,7 +100,11 @@ form label{
   color:gray;
   text-align: right;
   margin-right: 0.5em;
-  display: block
+  display: block;
+  @media (max-width: 980px) {
+    text-align: left;
+  }
+  
 }
 
 form input{
@@ -119,13 +115,15 @@ form input{
 }
 
 
-
-
 ul.users {
   color:gray;
 }
 
 /* ====================HEADER==================== */
+
+header {
+  height: auto !important;
+  }
 
 #logo {
   font-family: 'Playball', cursive;
@@ -151,6 +149,11 @@ ul.users {
   }
 }
 
+.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .navbar, .navbar-brand {
   margin-bottom:0px;
   font-size:1.5em;
@@ -159,6 +162,7 @@ ul.users {
 .dropdown-menu {
   background-color:#1b1b1b;
   position:absolute;
+  font-size:1.2em;
 }
 
 
@@ -193,11 +197,27 @@ aside {
   }
 }
 
+.stats, .viewprofile {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  }
+
 .stats {
   a {
-padding: 0 10px;border-left: 1px solid dimgray; color: dimgray;&:first-child {  padding-left: 0;  border: 0;}&:hover {  text-decoration: none;  color: gray;}
+  padding: 0 10px;
+  border-left: 1px solid dimgray; 
+  color: dimgray;
+  &:first-child {  
+    padding-left: 0;  
+    border: 0;
   }
-  strong {display: inline;
+  &:hover {
+    text-decoration: none;  
+    color: gray;}
+  }
+  strong {
+    display: inline;
   }
 }
 
@@ -211,9 +231,11 @@ padding: 0 10px;border-left: 1px solid dimgray; color: dimgray;&:first-child {  
 /* ====================FORMS==================== */
 
 input, textarea, select, .uneditable-input {
+  font-size:1.2em;
   border: 1px solid #bbb;
   margin-bottom: 15px;
   @include box_sizing;
+  width:99%;
 }
 
 input {
@@ -266,6 +288,8 @@ n
   width:100%;
   margin-left:auto;
   margin-right:auto;
+  font-size:1.2em;
+  
 }
 
 
@@ -275,6 +299,7 @@ n
   margin-right:auto;
   font-weight: bold;
   font-variant: small-caps;
+  font-size:1.5em;
   vertical-align:text-top;
 }
 
@@ -289,12 +314,13 @@ n
   font-weight: bold;
   font-variant: small-caps;
   padding-right: 5px;
+  font-size:1.2em;
 }
 
 .timestamp {
   color: DimGray;
   font-style:italic;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 delete.a:link {
