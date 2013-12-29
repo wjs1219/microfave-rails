@@ -12,34 +12,34 @@
         <span class="item"><a href=http://www.google.com/search?q=<%= micropost.item.gsub ' ','+' %> target="_blank"><%= micropost.item %></a></span>
         <span class="category">
           <% if micropost.category=='Music' %>
-            MUSIC
+            <i class="icomoon-music"></i>
           <% end %>
           <% if micropost.category=='Book' %>
-            BOOK
+            <i class="icomoon-book"></i>
           <% end %>
           <% if micropost.category=='Movie' %>
-            MOVIE
+            <i class="icomoon-camera"></i>
           <% end %>
           <% if micropost.category=='TV' %>
-            TV
+            <i class="icomoon-tv"></i>
           <% end %>
           <% if micropost.category=='Website' %>
-            WEBSITE
+            <i class="icomoon-screen"></i>
           <% end %>
           <% if micropost.category=='Food' %>
-            FOOD
+            <i class="icomoon-food"></i>
           <% end %>
           <% if micropost.category=='App' %>
-            APP
+            <i class="icomoon-mobile"></i>
           <% end %>
           <% if micropost.category=='Fashion' %>
-            FASHION
+            <i class="icomoon-t-shirt"></i>
           <% end %>
           <% if micropost.category=='Product' %>
-            PRODUCT
+            <i class="icomoon-cart"></i>
           <% end %>
           <% if micropost.category=='Other' %>
-            OTHER
+            Other
           <% end %>
         </span>
         <section class="content"><%= micropost.content %></section>
@@ -47,20 +47,20 @@
           <span class="timestamp">Posted <%= time_ago_in_words(micropost.created_at) %> ago.</span>
           <span class="buttons">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Share<b class="caret"></b>
+              <i class="icomoon-share"></i><b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Facebook", current_user %></li>
-              <li><%= link_to "Twitter", current_user %></li>
-              <li><%= link_to "Google+", current_user %></li>
-              <li><%= link_to "Reddit", current_user %></li>
-              <li><%= link_to "Stumble Upon", current_user %></li>
+              <li><%= link_to raw('<i class="icomoon-facebook"></i>'), current_user %></li>
+              <li><%= link_to raw('<i class="icomoon-twitter"></i>'), current_user %></li>
+              <li><%= link_to raw('<i class="icomoon-google-plus"></i>'), current_user %></li>
+              <li><%= link_to raw('<i class="icomoon-reddit"></i>'), current_user %></li>
+              <li><%= link_to raw('<i class="icomoon-stumbleupon"></i>'), current_user %></li>
             </ul>
-            <%= link_to "Like", current_user %>
-            <%= link_to "Broadcast", current_user %>
-            <%= link_to "Comment", current_user %>
+            <%= link_to raw('<i class="icomoon-heart"></i>'), current_user %>
+            <%= link_to raw('<i class="icomoon-bullhorn"></i>'), current_user %>
+            <%= link_to raw('<i class="icomoon-bubbles"></i>'), current_user %>
             <% if current_user?(micropost.user) %>
-            <%= link_to "Delete", micropost,  style: 'color:red', method: :delete,
+            <%= link_to raw('<i class="icomoon-trash"></i>'), micropost, method: :delete,
                                      data: { confirm: "Are you sure?" },
 			             title: micropost.item, 
                                      title: micropost.category,
