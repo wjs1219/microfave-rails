@@ -69,10 +69,10 @@ SampleApp::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
+    :address              => "smtp.aol.com",
     :port                 => 587,
-    :domain               => 'gmail.com',
-    :user_name            => 'ws1219@gmail.com',
+    :domain               => 'aol.com',
+    :user_name            => 'MFC5446@aol.com',
     :password             => 'seamus1983',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
