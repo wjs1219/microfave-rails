@@ -4,7 +4,7 @@
   <%= gravatar_for user, size: 52 %>
   <%= link_to user.username, user %><br>
   <%= user.name %>, <%= time_ago_in_words(user.dob) %> old<br>
-  <%= user.zip.to_region %>
+  <%= user.zip %>
 
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,
