@@ -5,18 +5,11 @@
       <h1><%= gravatar_for @user %>
       <%= @user.name %></h1>
       <span><%= link_to @user.username,@user %></span>
-      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
+      <span><b>Microfaves:</b> <%= @user.microposts.count %></span>
     </section>
-    <section>
+    <p>
       <%= render 'shared/stats' %>
-      <% if @users.any? %>
-        <div class="user_avatars">
-          <% @users.each do |user| %>
-            <%= link_to gravatar_for(user, size: 30), user %>
-          <% end %>
-        </div>
-      <% end %>
-    </section>
+    </p>
   </aside>
   <div class="span8">
     <h3><%= @title %></h3>

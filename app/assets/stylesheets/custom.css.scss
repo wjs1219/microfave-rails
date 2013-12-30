@@ -31,7 +31,7 @@ html {
 body {
   padding-top: 70px !important;
   background: White;
-  width:100%;
+  width:95%;
   margin-left:auto;
   margin-right:auto;
 }
@@ -58,6 +58,10 @@ ol {
 
 textarea {
   resize: vertical;
+}
+
+.hidden {
+  display: none;
 }
 
 /* ====================TYPOGRAPHY===================== */
@@ -96,7 +100,7 @@ p#about {
   text-align: center;
 }
 
-form label{
+form label {
   color:gray;
   text-align: right;
   margin-right: 0.5em;
@@ -104,19 +108,24 @@ form label{
   @media (max-width: 980px) {
     text-align: left;
   }
-  
 }
 
-form input{
-  color: gray;
-  text-align: left;
-  margin-right: 0.5em;
-  display: block
+.simple_form label {
+  float:left;
+  width:100px;
+  text-align:left;
+  &:abbr {
+    float:right !important;
+  }
 }
-
 
 ul.users {
   color:gray;
+}
+
+.micropostmargin {
+  padding:3px;
+
 }
 
 /* ====================HEADER==================== */
@@ -197,7 +206,7 @@ aside {
   }
 }
 
-.stats, .viewprofile {
+h3 div.stats, .viewprofile {
   margin-left:auto;
   margin-right:auto;
   text-align:center;
@@ -235,18 +244,36 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   margin-bottom: 15px;
   @include box_sizing;
-  width:99%;
 }
 
 input {
   height: auto !important;
 }
 
-#micropost_content {width:100%; line-height:1;}
+
+form input{
+  color: gray;
+  text-align: left;
+  margin-right: 0.5em;
+  display: block;
+}
+
+#micropost_content {width:100%; line-height:1.2;}
 #micropost_item {width:100%; vertical-align:top;}
 #micropost_category {width:100%;}
 
-#error_explanation {
+.btn {
+  width:99%;
+  min-height:30px;
+  margin-left:auto;
+  margin-right:auto;
+  align:center;
+  @media (min-width: 980px) {
+    min-height:50px;
+  }
+}
+
+#error_explanation, .help-inline, .alert {
   color: #f00;
   ul {list-style: none;margin: 0 0 18px 0;
   }

@@ -10,12 +10,12 @@
     <h2>
       <div><%= @user.name %></div>
       <div><%= time_ago_in_words(@user.dob) %> old</div>
-      <div><%= @user.zip.to_region %></div>
+      <div><%= @user.zip %></div>
     </h2>      
   </section>
-  <section>
+  <h3>
     <%= render 'shared/stats' %>
-  </section>
+  </h3>
   <section>
     <%= render 'follow_form' if signed_in? %>
     <% if @user.microposts.any? %>
