@@ -10,7 +10,7 @@ class Contact < MailForm::Base
     {
       :subject => "Microfave Contact Form Inquiry",
       :to => "ws1219@gmail.com",
-      :from => %("#{name}" <#{email}>)
+      :from => "MFC5446@aol.com"
     }
   end
 end
