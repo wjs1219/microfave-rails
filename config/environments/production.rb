@@ -72,7 +72,7 @@ SampleApp::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'gmail.com',
-    :user_name            => 'ws1219',
+    :user_name            => 'ws1219@gmail.com',
     :password             => 'seamus1983',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
