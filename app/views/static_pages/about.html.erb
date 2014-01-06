@@ -1,10 +1,22 @@
 <% provide(:title, 'About Us') %>
+<div class="container">
+<div class="row">
 <h1>About Us</h1>
-<p id="about">
-microFAVE is an attempt at creating a simple, better means of sharing with others what you love. Think of it as a modern day show-and-tell. Whether it's a new song you think others must hear or a pair of shoes you've got your eye on, we have a feeling others want to hear what's currently occupying your mind.
-</p>
-<p id="about">
-This is a beta version, so bugs may abound. Please feel free to let us know what works, what doesn't, and what would make microFAVE better by using our <%= link_to "contact page", new_contact_path %>.
+</div>
 
+<div class="row">
+<p class="about">
+<span class="playball">Microfave</span> is an attempt at creating a simple, better means of sharing with others what you love. Think of it as a modern day show-and-tell. Whether it's a new song you think others ought to hear or a pair of shoes you've got your eye on, we have a feeling others want to know what's currently occupying your mind.
+</p>
+</div>
+
+<div class="row">
+<p class="about">
+This is a beta version, so bugs <del>may</del> will abound. Please feel free to let us know what works, what doesn't, and what would make <span class="playball">Microfave</span> better by using our <%= link_to "contact page", contact_path %>.
+</p>
+
+<p class="about">
 Thanks and have fun!
 </p>
+</div>
+</div>

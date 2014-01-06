@@ -1,29 +1,40 @@
 <%# For Individual User Page %>
 
 <% provide(:title, @user.name) %>
-<div class="row">
-  <section>
-    <h1>
-      <%= gravatar_for @user %>
-      <%= @user.username %>
-    </h1>
-    <h2>
-      <div><%= @user.name %></div>
-      <div><%= time_ago_in_words(@user.dob) %> old</div>
-      <div><%= @user.zip %></div>
-    </h2>      
-  </section>
+<div class="container">
+  <h1>
+    <%= gravatar_for @user %>
+    <%= @user.username %>
+  </h1>
+  <h3 class="center">
+    <%= @user.name %>, <%= time_ago_in_words(@user.dob) %> old</h3>
+  <h3 class="center"><%= @user.location %></h3>  
   <h3>
     <%= render 'shared/stats' %>
   </h3>
-  <section>
-    <%= render 'follow_form' if signed_in? %>
-    <% if @user.microposts.any? %>
-      <h3>MicroFAVES (<%= @user.microposts.count %>)</h3>
-      <ol class="microfaves">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-  </section>
+
+  <%= render 'follow_form' if signed_in? %>
+<div class="container">
+  <% if @user.microposts.any? %>
+  <h3><span class="playball">Microfaves</span>(<%= @user.microposts.count %>)</h3>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">All</a></li>
+      <li><a href="#">Music</a></li>
+      <li><a href="#">Book</a></li>
+      <li><a href="#">Movie</a></li>
+      <li><a href="#">TV</a></li>
+      <li><a href="#">Place</a></li>
+      <li><a href="#">Food</a></li>
+      <li><a href="#">Website</a></li>
+      <li><a href="#">App</a></li>
+      <li><a href="#">Fashion</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Other</a></li>
+      <li class="search"><input type="text" name="Search" placeholder="Search"></li>
+    </ul>
+    <ol class="microfaves">
+      <%= render @microposts %>
+    </ol>
+    <%= will_paginate @microposts %>
+  <% end %>
 </div>

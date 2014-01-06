@@ -1,8 +1,20 @@
 <% if @feed_items.any? %>
-  <section>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">All</a></li>
+      <li><a href="#">Music</a></li>
+      <li><a href="#">Book</a></li>
+      <li><a href="#">Movie</a></li>
+      <li><a href="#">TV</a></li>
+      <li><a href="#">Place</a></li>
+      <li><a href="#">Food</a></li>
+      <li><a href="#">Website</a></li>
+      <li><a href="#">App</a></li>
+      <li><a href="#">Fashion</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Other</a></li>
+    </ul>
     <ol class="microfaves">
       <%= render partial: 'shared/feed_item', collection: @feed_items %>
     </ol>
     <%= will_paginate @feed_items %>
-  </section>
 <% end %>

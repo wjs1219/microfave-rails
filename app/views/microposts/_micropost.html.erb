@@ -1,6 +1,6 @@
 <div class="microfave">
   <div class="<%= micropost.category %>">
-    <li id="<%= micropost.id %>">
+    <ul id="<%= micropost.id %>">
       <li class="post">
         <span class="user"><%= link_to gravatar_for(micropost.user), micropost.user %>
         </span>
@@ -43,8 +43,8 @@
           <% end %>
         </span>
         <section class="content"><%= micropost.content %></section>
-        <nav>
-          <span class="timestamp">Posted <%= time_ago_in_words(micropost.created_at) %> ago.</span>
+        <nav class="postnav">
+          <span class="timestamp">Posted <%= t(micropost.created_at) %></span>
           <span class="buttons">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="icomoon-share"></i><b class="caret"></b>
@@ -69,6 +69,6 @@
           </span>
         </nav>
       </li>
-    </li>
+    </ul>
   </div>
 </div>

@@ -1,10 +1,12 @@
 <%# For Home Page %>
-
-<h1>
-  <%= link_to gravatar_for(current_user, size: 52), current_user %>
-  <%= current_user.username %>
-</h1>
-<h3 class="viewprofile">
-  <span><%= link_to "view my profile", current_user %></span>
-  <span><%= pluralize(current_user.microposts.count, "favorite thing") %></span>
-</h3>
+<div class="container">
+  <h3 class="userinfo">
+    <div class="inline">
+      <%= link_to gravatar_for(current_user, size: 52), current_user %>
+        <%= current_user.username %>
+    </div>
+    <div class="block">
+      <%= render 'shared/stats' %>
+    </div>
+  </h3>
+</div>

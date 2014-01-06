@@ -1,5 +1,19 @@
 <% provide(:title, 'Contact') %>
+<div class = "container">
 <h1>Contact</h1>
-<p id="about">
-  Contact microFAVE by using the form below (coming soon).
-</p>
+
+<form method=post name=htmlform action=html_form_send.php_path align="center">
+<div class="row form">
+
+  <label class="col-xs-12 label" for=comments>
+    Comments *
+  </label>
+  <textarea class="col-xs-12 forminput contactinput" name=comments>
+  </textarea>
+</div>
+          
+<div>
+  <input class="btn btn-large btn-primary center" value=Send type=submit>
+</div>
+</form>
+</div>

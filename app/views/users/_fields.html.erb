@@ -1,49 +1,62 @@
+<div class="container">
 <%= render 'shared/error_messages', object: f.object %>
+<div class="row form">
+  <div class="col-xs-12 col-md-6 label">
+    <%= f.label :name, :class => 'label' %>
+  </div>
 
-<div class="col-xs-12 col-md-3 col-md-offset-2">
-  <%= f.label :name %>
-</div>
-<div class="col-xs-12 col-md-5">
-  <%= f.text_field :name %>
-</div>
-
-<div class="col-xs-12 col-md-3 col-md-offset-2">
-  <%= f.label :zip, "Zip/Postal Code" %>
+  <div class="col-xs-12 col-md-6">
+    <%= f.text_field :name, :class => 'forminput' %>
+  </div>
 </div>
 
-<div class="col-xs-12 col-md-5">
-  <%= f.text_field :zip %>
+<div class="row form">
+  <div class="col-xs-12 col-md-6 label">
+    <%= f.label :email, :class => 'label' %>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <%= f.text_field :email, :class => 'forminput' %>
+  </div>
 </div>
 
-<div class="col-xs-12 col-md-3 col-md-offset-2">
-  <%= f.label :dob, "Date of Birth" %>
+<div class="row form">
+  <div class="col-xs-12 col-md-6 label">
+    <%= f.label :location, :class => 'label' %>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <%= f.text_field :location, :class => 'forminput' %>
+  </div>
 </div>
 
-<div class="col-xs-12 col-md-5">
-  <%= date_select :user, :dob, :start_year => Time.now.year - 100, :end_year => Time.now.year, :order => [:month, :day, :year] %>
+<div class="row form">
+  <div class="col-xs-12 col-md-6 label">
+    <%= f.label :dob, "Date of Birth", :class => 'label' %>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <%= date_select :user, :dob, :start_year => Time.now.year - 100, :end_year => Time.now.year, :order => [:month, :day, :year] %>
+  </div>
 </div>
 
+<div class="row form">
+  <div class="col-xs-12 col-md-6 label">
+    <%= f.label :password, :class => 'label' %>
+  </div>
 
-<div class="col-xs-12 col-md-3 col-md-offset-2">
-  <%= f.label :email %>
+  <div class="col-xs-12 col-md-6">
+    <%= f.password_field :password, :class => 'forminput' %>
+  </div>
 </div>
 
-<div class="col-xs-12 col-md-5">
-  <%= f.text_field :email %>
-</div>
+<div class="row form">
+  <div class="col-xs-12 col-md-6 label">
+    <%= f.label :password_confirmation, "Confirm Password", :class => 'label' %>
+  </div>
 
-<div class="col-xs-12 col-md-3 col-md-offset-2">
-  <%= f.label :password %>
+  <div class="col-xs-12 col-md-6">
+    <%= f.password_field :password_confirmation, :class => 'forminput' %>
+  </div>
 </div>
-
-<div class="col-xs-12 col-md-5">
-  <%= f.password_field :password %>
-</div>
-
-<div class="col-xs-12 col-md-3 col-md-offset-2">
-  <%= f.label :password_confirmation, "Confirm Password" %>
-</div>
-
-<div class="col-xs-12 col-md-5">
-  <%= f.password_field :password_confirmation %>
 </div>
