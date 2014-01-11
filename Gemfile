@@ -11,7 +11,6 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'area'
-gem 'sunspot_rails'
 
 gem 'mail_form', '~> 1.5.0.rc'
 gem 'simple_form', '~> 3.0.0.rc'
@@ -25,7 +24,6 @@ group :development, :test do
   gem 'childprocess', '0.3.9'
   gem 'better_errors'
   gem 'quiet_assets'
-  gem 'sunspot_solr'
 end
 
 group :test do

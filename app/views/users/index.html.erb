@@ -1,12 +1,6 @@
 <% provide(:title, 'All Users') %>
 <div class="container">
-<div class="row">
-    <%= form_tag users_path, :method => :get do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    <% end %>
-    <%= button_to "Clear", users_path, :method => "get" %>
-</div>
+
 <div class="row">
   <h1>All Users</h1>
 </div>

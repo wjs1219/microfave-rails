@@ -5,7 +5,9 @@
   <nav>
     <ul>
       <li><%= link_to raw('<i class="icomoon-info"></i>'),   about_path %></li>
-      <li><%= link_to raw('<i class="icomoon-envelop"></i>'), contact_path %></li>
+      <% if signed_in? %>
+        <li><%= link_to raw('<i class="icomoon-envelop"></i>'), contact_path %></li>
+      <% end %>
     </ul>
   </nav>
 </footer>

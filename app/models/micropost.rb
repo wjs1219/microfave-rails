@@ -6,11 +6,6 @@ class Micropost < ActiveRecord::Base
   validates :category, presence: true
   validates :user_id, presence: true
 
-  searchable do
-    text :item, :boost => 5
-    text :content
-  end
-
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)
     followed_user_ids = "SELECT followed_id FROM relationships
